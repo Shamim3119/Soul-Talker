@@ -1,0 +1,182 @@
+
+.edit-user-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.edit-user-modal {
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #1f2937;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.edit-user-header,
+.edit-user-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.edit-user-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.edit-user-close {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.edit-user-body {
+    padding: 24px;
+}
+
+.edit-user-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.edit-user-field label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.edit-user-field input,
+.edit-user-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+}
+
+.edit-user-field input:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.edit-user-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.edit-user-note {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.edit-user-error {
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.edit-user-footer {
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 0;
+}
+
+.edit-user-footer button {
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.edit-user-cancel {
+    border: 1px solid #d1d5db;
+    background: transparent;
+    color: inherit;
+}
+
+.edit-user-save {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: white;
+}
+
+.edit-user-save:hover {
+    background: #1d4ed8;
+}
+
+.edit-user-footer button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .edit-user-modal {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .edit-user-field input,
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .edit-user-field select {
+    background: #111827;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .edit-user-field input:disabled {
+    background: #374151;
+    color: #d1d5db;
+}
+
+@media (max-width: 600px) {
+    .edit-user-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .edit-user-body {
+        padding: 16px;
+    }
+}

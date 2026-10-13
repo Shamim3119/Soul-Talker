@@ -1,0 +1,209 @@
+.create-user-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.create-user-modal {
+    width: 100%;
+    max-width: 680px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    color: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.create-user-header,
+.create-user-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.create-user-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.create-user-close {
+    background: transparent;
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+    color: inherit;
+}
+
+.create-user-body {
+    padding: 24px;
+}
+
+.create-user-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.create-user-field label {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.create-user-field input,
+.create-user-field select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+    color: #111827;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.create-user-field input:focus,
+.create-user-field select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.create-user-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.create-user-results {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.create-user-results button {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    background: transparent;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+}
+
+.create-user-results button:hover {
+    background: #eff6ff;
+}
+
+.create-user-note {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.create-user-error {
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.create-user-footer {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: none;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.create-user-footer button {
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+}
+
+.create-user-submit {
+    background: #2563eb;
+    border-color: #2563eb !important;
+    color: #fff;
+}
+
+.create-user-cancel {
+    background: transparent;
+    color: inherit;
+}
+
+.create-user-footer button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .create-user-modal {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .create-user-field input,
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .create-user-field select,
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .create-user-results {
+    background: #111827;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+:is(
+    body.dark,
+    body.dark-mode,
+    html.dark,
+    html.dark-mode,
+    [data-theme="dark"]
+) .create-user-results button:hover {
+    background: #374151;
+}
+
+@media (max-width: 600px) {
+    .create-user-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .create-user-body {
+        padding: 16px;
+    }
+}

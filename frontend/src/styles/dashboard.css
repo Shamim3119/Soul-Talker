@@ -1,0 +1,73 @@
+.dashboard-welcome {
+    margin-bottom: 25px;
+}
+
+.dashboard-welcome h2 {
+    margin: 0 0 6px;
+
+    color: var(--text-main);
+
+    font-size: 24px;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 18px;
+}
+
+.dashboard-card {
+    padding: 22px;
+
+    background: var(--bg-surface);
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+}
+
+.dashboard-card > span {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-card > strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-main);
+
+    font-size: 27px;
+}
+
+.dashboard-card p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}

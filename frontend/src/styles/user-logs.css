@@ -1,0 +1,216 @@
+.user-logs-page {
+    width: 100%;
+    color: inherit;
+}
+
+.user-logs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.user-logs-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.user-logs-header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.user-logs-count {
+    font-size: 14px;
+}
+
+.user-logs-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-logs-filters input,
+.user-logs-filters select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+    min-width: 140px;
+}
+
+.user-logs-filters button,
+.user-logs-pagination button {
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.user-logs-filters .user-logs-reset {
+    background: #64748b;
+}
+
+.user-logs-pagination button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.user-logs-panel {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.user-logs-table-wrapper {
+    overflow-x: auto;
+}
+
+.user-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.user-logs-table th,
+.user-logs-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.user-logs-table th {
+    font-weight: 700;
+    background: #f8fafc;
+}
+
+.user-logs-agent {
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-logs-event {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.event-login_success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.event-login_failed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.event-logout,
+.event-session_expired {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.event-forced_logout {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.user-logs-message {
+    padding: 35px;
+    text-align: center;
+}
+
+.user-logs-error {
+    color: #dc2626;
+}
+
+.user-logs-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.user-logs-pagination > div {
+    display: flex;
+    gap: 8px;
+}
+
+/* Dark mode — same selectors as Online Users */
+
+body.dark .user-logs-panel,
+body.dark-mode .user-logs-panel,
+html.dark .user-logs-panel,
+html.dark-mode .user-logs-panel,
+[data-theme="dark"] .user-logs-panel {
+    background: #1e293b;
+    color: #e5e7eb;
+    border-color: #334155;
+}
+
+body.dark .user-logs-table th,
+body.dark-mode .user-logs-table th,
+html.dark .user-logs-table th,
+html.dark-mode .user-logs-table th,
+[data-theme="dark"] .user-logs-table th {
+    background: #273449;
+}
+
+body.dark .user-logs-table td,
+body.dark .user-logs-table th,
+body.dark-mode .user-logs-table td,
+body.dark-mode .user-logs-table th,
+html.dark .user-logs-table td,
+html.dark .user-logs-table th,
+html.dark-mode .user-logs-table td,
+html.dark-mode .user-logs-table th,
+[data-theme="dark"] .user-logs-table td,
+[data-theme="dark"] .user-logs-table th {
+    border-bottom-color: #334155;
+}
+
+body.dark .user-logs-filters input,
+body.dark .user-logs-filters select,
+body.dark-mode .user-logs-filters input,
+body.dark-mode .user-logs-filters select,
+html.dark .user-logs-filters input,
+html.dark .user-logs-filters select,
+html.dark-mode .user-logs-filters input,
+html.dark-mode .user-logs-filters select,
+[data-theme="dark"] .user-logs-filters input,
+[data-theme="dark"] .user-logs-filters select {
+    background: #1e293b;
+    color: #e5e7eb;
+    border-color: #475569;
+}
+
+@media (max-width: 768px) {
+    .user-logs-header h1 {
+        font-size: 22px;
+    }
+
+    .user-logs-filters input,
+    .user-logs-filters select {
+        flex: 1 1 140px;
+    }
+
+    .user-logs-pagination {
+        flex-wrap: wrap;
+    }
+}
